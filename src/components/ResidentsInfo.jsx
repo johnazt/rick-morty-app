@@ -12,11 +12,15 @@ const ResidentsInfo = ({ url }) => {
 
 	return (
 		<div className="character">
-			<h4>{character.name}</h4>
-			<img src={character.image} alt={character.name} />
 			<p>Status: {character.status}</p>
-			<p>Origin: {character.origin?.name}</p>
-			<p>Appearances: {character.episode?.length}</p>
+			<img src={character.image} alt={character.name} />
+			<h4>{character.name}</h4>
+			<ul>
+				<li><span>Specie:</span>{character.species}</li>
+				<li><span>Origin:</span>{character.origin?.name}</li>
+				<li><span>Appearances:</span>{character.episode?.length}</li>
+			</ul>
+			
 		</div>
 	);
 };

@@ -1,31 +1,84 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-* {
+*,*::before,*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ==== BASE ===== */
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+} */
+
 li {
   list-style-type: none;
 }
+a {
+  text-decoration: none;
+}
+/* ========= APP =========== */
+.App {
+  background-color: #084851;
+}
 
-/* ========== CARD =========== */
-.card {
-  padding: 1em;
-  text-align: center;
-}
-.card__title {
-  margin-bottom: 2em;
-}
-.card__info {
+/* ========== INPUT ========== */
+.container-input {
+  background-color: #084851;
+  background-image: url("./assets/rickandmorty-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
   display: flex;
-  column-gap: 3em;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2em;
+  align-items: center;
+  padding: 2em;
 }
-.read-the-docs {
-  color: #888;
+.container__title {
+  background-image: url("./assets/rickandmorty-title.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 200px;
+  width: 100%;
+}
+.container__search-bar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+.input {
+  padding: 1em;
+  min-width: 311px;
+  border-radius: 5px;
+  border: transparent;
+}
+.btn-input {
+  border: transparent;
+  padding: .5em 1em;
+  border-radius: 5px;
+  background-color: #062226;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+/* ========== INFO =========== */
+.info {
+  padding: 2em 1em;
+  text-align: center;
+  background-color: #062226;
+  color: #fff;
+}
+.info__list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5em;
+}
+.info__list li b {
+  font-size: 19px;
+  display: inline-block;
+  margin-bottom: .5em;
 }

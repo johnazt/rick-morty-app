@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Card from "./components/Card";
+import Info from "./components/Info";
 import ResidentsInfo from "./components/ResidentsInfo";
 import Input from "./components/Input";
 import axios from "axios";
@@ -26,13 +26,15 @@ function App() {
 
 	return (
 		<div className="App">
+			
+			
 			<Input id={id} setId={setId} searchById={searchById}></Input>
-      <Card data={location} />
 
-      {location.residents?.map(url => (
-        <ResidentsInfo key={url} url={url} />
-      ))}
+			<Info data={location} />
 
+			{location.residents?.map(url => (
+				<ResidentsInfo key={url} url={url} />
+			))}
 		</div>
 	);
 }
