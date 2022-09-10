@@ -1,7 +1,9 @@
-*,*::before,*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /* ==== BASE ===== */
@@ -12,73 +14,136 @@
 } */
 
 li {
-  list-style-type: none;
+	list-style-type: none;
 }
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 /* ========= APP =========== */
 .App {
-  background-color: #084851;
+	background-color: #084851;
+}
+img {
+	display: block;
+	width: 100%;
+	object-fit: cover;
 }
 
 /* ========== INPUT ========== */
 .container-input {
-  background-color: #084851;
-  background-image: url("./assets/rickandmorty-bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  row-gap: 2em;
-  align-items: center;
-  padding: 2em;
+	background-color: #084851;
+	background-image: url("./assets/rickandmorty-bg.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 2em;
+	align-items: center;
+	padding: 2em;
 }
 .container__title {
-  background-image: url("./assets/rickandmorty-title.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 200px;
-  width: 100%;
+	background-image: url("./assets/rickandmorty-title.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 200px;
+	width: 100%;
 }
 .container__search-bar {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1em;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1em;
 }
 .input {
-  padding: 1em;
-  min-width: 311px;
-  border-radius: 5px;
-  border: transparent;
+	padding: 1em;
+	min-width: 311px;
+	border-radius: 5px;
+	border: transparent;
 }
 .btn-input {
-  border: transparent;
-  padding: .5em 1em;
-  border-radius: 5px;
-  background-color: #062226;
-  color: #fff;
-  text-transform: capitalize;
-  font-size: 1.1rem;
+	border: transparent;
+	padding: 0.5em 1em;
+	border-radius: 5px;
+	background-color: #062226;
+	color: #fff;
+	text-transform: capitalize;
+	font-size: 1.1rem;
 }
 /* ========== INFO =========== */
 .info {
-  padding: 2em 1em;
-  text-align: center;
-  background-color: #062226;
-  color: #fff;
+	padding: 2em 1em;
+	text-align: center;
+	background-color: #062226;
+	color: #fff;
+	margin: 2em 0;
 }
-.info__list{
-  display: flex;
-  flex-direction: column;
-  row-gap: 2.5em;
+.info__list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2.5em;
 }
 .info__list li b {
-  font-size: 19px;
-  display: inline-block;
-  margin-bottom: .5em;
+	font-size: 19px;
+	display: inline-block;
+	margin-bottom: 0.5em;
+}
+/* ========== RESIDENTS INFO ============ */
+.character {
+	max-width: 300px;
+	background-color: #062226;
+	color: #fff;
+	position: relative;
+}
+.character__info {
+	padding: 1em;
+}
+.character__name {
+	font-size: 27px;
+	margin-bottom: 0.7em;
+	position: relative;
+	font-weight: 300;
+}
+.character__name::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	height: 1px;
+	width: 100%;
+	background-color: #084851;
+}
+.character__info li {
+	font-weight: 600;
+	text-transform: capitalize;
+}
+.character__info span {
+	text-transform: uppercase;
+	color: #7e7e7e;
+	font-weight: 600;
+	font-size: 14px;
+}
+.character__status {
+	text-transform: capitalize;
+  font-weight: 600;
+  font-size: 14px;
+	position: absolute;
+	top: 2em;
+	left: 0;
+	padding: 0.6em .5em ;
+	background-color: #062226;
+	display: flex;
+	align-items: center;
+  column-gap: .5em;
+	width: 133px;
+	border-radius: 0 10px 10px 0;
+}
+.status {
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	background-color: red;
+	border-radius: 50%;
 }

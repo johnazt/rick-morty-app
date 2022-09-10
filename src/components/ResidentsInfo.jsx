@@ -10,17 +10,29 @@ const ResidentsInfo = ({ url }) => {
 
 	console.log(character);
 
+
+
 	return (
 		<div className="character">
-			<p>Status: {character.status}</p>
-			<img src={character.image} alt={character.name} />
-			<h4>{character.name}</h4>
-			<ul>
-				<li><span>Specie:</span>{character.species}</li>
-				<li><span>Origin:</span>{character.origin?.name}</li>
-				<li><span>Appearances:</span>{character.episode?.length}</li>
+			<p className="character__status" ><span className="status"></span>{character.status}</p>
+			<img className="character__img" src={character.image} alt={character.name} />
+
+			<ul className="character__info">
+				<p className="character__name">{character.name}</p>
+
+				<li>
+					<span>Specie</span><br />
+					{character.species}
+				</li>
+				<li>
+					<span>Origin</span><br />
+					{character.origin?.name}
+				</li>
+				<li>
+					<span>Appearances</span><br />
+					{character.episode?.length}
+				</li>
 			</ul>
-			
 		</div>
 	);
 };
