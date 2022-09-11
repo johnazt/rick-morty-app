@@ -27,14 +27,16 @@ function App() {
 	return (
 		<div className="App">
 			
-			
+
 			<Input id={id} setId={setId} searchById={searchById}></Input>
 
 			<Info data={location} />
 
-			{location.residents?.map(url => (
-				<ResidentsInfo key={url} url={url} />
-			))}
+			<div className="container-characters">
+				{location.residents?.map(url => (
+					<ResidentsInfo key={url} url={url} />
+				))}
+			</div>
 		</div>
 	);
 }
