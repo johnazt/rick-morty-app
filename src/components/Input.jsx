@@ -4,10 +4,10 @@ const Input = ({ id, setId, searchById }) => {
 	return (
 		<div className="container-input">
 			<div className="container__title"></div>
-			<div className="container__search-bar">
+			<div className="container__search-bar container-info">
 				<input
-                    className="input"
-                    placeholder="Type a number between 1 and 126"
+					className="input"
+					placeholder="Type a number between 1 and 126"
 					type="search"
 					value={id}
 					onChange={e => setId(e.target.value)}

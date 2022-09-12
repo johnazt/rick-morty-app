@@ -32,7 +32,7 @@ function App() {
 
 			<Info data={location} />
 
-			<div className="container-characters">
+			<div className="container-characters container-info">
 				{location.residents?.map(url => (
 					<ResidentsInfo key={url} url={url} />
 				))}

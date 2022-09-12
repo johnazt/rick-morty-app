@@ -2,8 +2,8 @@ import React from "react";
 
 const Info = ({ data }) => {
 	return (
-		<div className="info">
-			<ul className="info__list">
+		<div className="info container-info">
+			<ul className="info__list ">
                 <li className="info__title">
                     <b>Name:</b><br />{data.name}</li>
 				<li>
